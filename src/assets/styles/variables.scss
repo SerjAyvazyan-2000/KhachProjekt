@@ -1,0 +1,29 @@
+// colors
+
+$black: #000000;
+$white:#ffffff;
+
+$text_color:#999999;
+
+$white_01:rgba(255, 255, 255, 0.1);
+$white_02:rgba(255, 255, 255, 0.2);
+$white_05:rgba(255, 255, 255, 0.5);
+$black_01: rgba(0, 0, 0, 0.1);
+$black_05:rgba(0, 0, 0, 0.5);
+$black_02:rgba(0, 0, 0, 0.2);
+$white_gradient_text:linear-gradient(97.27deg, #FFFFFF -2.65%, #999999 80.16%);
+$white_gradient_title: linear-gradient(90.54deg, #595959 -1.71%, #272727 97.31%, #202020 97.32%);
+$gray_gradient:linear-gradient(131.44deg, #161616 9.21%, #313131 130.33%);
+
+
+
+//page withs
+
+$max-width-1440: 1440px;
+$max-width-1200: 1200px;
+$max-width-991: 991px;
+$max-width-767: 767px;
+$max-width-576: 576px;
+$max-width-375:375px;
+// transitions
+$transition: 0.3s;

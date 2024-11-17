@@ -1,0 +1,36 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixin";
+
+.personal_settings_section{
+    margin-top: 300px;
+    @include screen-max-width-1200 {
+      margin-top: 220px;
+    }
+    @include screen-max-width-991 {
+      margin-top: 160px;
+    }
+    @include screen-max-width-767 {
+      margin-top: 140px;
+    }
+
+}
+
+
+.personal_settings_list {
+  margin-top: 100px;
+  width: 100%;
+  gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include screen-max-width-1200{
+    margin-top: 80px;
+  }
+  @include screen-max-width-991{
+    margin-top: 60px;
+  }
+  @include screen-max-width-767{
+    margin-top: 40px;
+  }
+
+}

@@ -1,0 +1,161 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixin";
+
+.usearea-section {
+  margin-top: 200px;
+  margin-bottom: 140px;
+  @include screen-max-width-1200{
+    margin-top: 100px;
+    margin-bottom: 120px;
+  }
+  @include screen-max-width-991{
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+}
+
+.usearea-title {
+  margin-bottom: 100px;
+  @include screen-max-width-991{
+    margin-bottom: 60px;
+  }
+}
+
+.usearea-list{
+  width: 60%;
+  @include screen-max-width-1200{
+    overflow: hidden;
+    overflow-x: auto;
+    width: 100%;
+    padding: 2px;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    margin-bottom: 60px;
+  }
+  @include screen-max-width-767{
+    margin-bottom: 40px;
+  }
+  ul{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    @include screen-max-width-1200{
+      flex-direction: row;
+    }
+    @include screen-max-width-1440{
+      gap: 40px;
+    }
+    li{
+      cursor: pointer;
+      .usearea-icon-content{
+        position: relative;
+        margin-right: 40px;
+
+      }
+      .usearea-icon{
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        border: 1px solid $white_02;
+        background-color: $black;
+        z-index: 55;
+        @include screen-max-width-767{
+          width: 75px;
+          height: 75px;
+        }
+
+      }
+      &.selected-usearea{
+
+        .circle-select{
+          border-radius: 100%;
+          content: '';
+          background-image: linear-gradient(180deg, #660C00 0%, #874900 100%);
+          top: -2px;
+          left: -2px;
+          bottom: -2px;
+          right: -2px;
+          position: absolute;
+        }
+        .usearea-icon{
+          position: relative;
+          border: 1px solid transparent;
+        }
+      }
+      p{
+        font-family: "HelveticaNeueCyr", sans-serif;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 35.2px;
+
+        @include screen-max-width-1440{
+          font-size: 24px;
+          line-height: 26.4px;
+        }
+        @include screen-max-width-1200{
+          white-space: nowrap;
+        }
+        @include screen-max-width-767{
+          font-size: 20px;
+          line-height: 22px;
+        }
+      }
+      .robot-icon{
+        width: 35px;
+        height: 35px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.usearea-selected{
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;
+  @include screen-max-width-1440{
+    height: 50vw;
+  }
+  @include screen-max-width-1200{
+    width: 100%;
+    height: 90vw;
+    padding: 20px;
+  }
+
+  @include screen-max-width-767{
+    height: 400px;
+  }
+
+  p{
+    font-family: 'HelveticaNeueCyrMedium', sans-serif;
+    font-size: 24px;
+    line-height: 33.6px;
+    max-width: 360px;
+    color: $black_05;
+    @include screen-max-width-991{
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+}
+
+.usearea-options{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: initial;
+  justify-content: flex-start;
+  gap: 20px;
+
+  @include screen-max-width-1200{
+    flex-direction: column !important;
+  }
+  @include screen-max-width-767{
+    gap: 0 !important;
+  }
+}

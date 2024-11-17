@@ -1,0 +1,126 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixin";
+
+.engine-card {
+  width: calc(50% - 12.5px);
+  background: $gray_gradient;
+  padding: 60px;
+  min-height: 610px;
+  position: relative;
+  overflow: hidden;
+  @include screen-max-width-1200 {
+    min-height: 550px;
+  }
+  @include screen-max-width-1440{
+    padding: 40px;
+  }
+
+  @include screen-max-width-767{
+    min-height: 400px;
+  }
+
+  @include screen-max-width-991 {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .engine-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 450px;
+    height: 450px;
+    z-index: 2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include screen-max-width-1440 {
+      width: 350px;
+      height: 350px;
+    }
+    @include screen-max-width-1200 {
+      width: 270px;
+      height: 270px;
+    }
+    @include screen-max-width-991 {
+      width: 450px;
+      height: 450px;
+    }
+    @include screen-max-width-767{
+      width: 350px;
+      height: 350px;
+    }
+    @include screen-max-width-576{
+      width: 220px;
+      height: 220px;
+      right: -30px;
+      bottom: -30px;
+    }
+  }
+
+  .engine-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include screen-max-width-767{
+      padding-right: 70px;
+    }
+    h3 {
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 44px;
+      @include screen-max-width-767 {
+        font-size: 32px;
+        line-height: 35.2px;
+      }
+
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 33.6px;
+      font-family: 'HelveticaNeueCyrMedium', sans-serif;
+      max-width: 510px;
+      color: $white_05;
+      @include screen-max-width-1200 {
+        font-size: 18px;
+        line-height: 25.2px;
+      }
+    }
+  }
+
+  .more-info {
+    color: $white_05;
+    cursor: pointer;
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+
+    p {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 33.6px;
+      color: $white_05;
+    }
+    @include screen-max-width-767{
+      display: none !important;
+    }
+  }
+}
+
+.mobile-show-more {
+  display: none !important;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  color: $white;
+
+  @include screen-max-width-767 {
+    display: block !important;
+  }
+}

@@ -1,0 +1,84 @@
+@import "src/assets/styles/variables";
+@import "src/assets/styles/mixin";
+.workshop-section{
+  background-color: $white;
+  padding: 140px 0;
+  overflow: hidden;
+  position: relative;
+  @include screen-max-width-1200{
+    padding: 100px 0;
+  }
+  @include screen-max-width-991{
+    padding-bottom: 60px;
+  }
+}
+
+.workshop-info{
+  width:50%;
+
+  @media(max-width: 1700px){
+    width: 40%;
+  }
+  @include screen-max-width-1200{
+    width: 100%;
+  }
+  svg{
+    color: $black_01;
+  }
+  h3{
+    background: linear-gradient(105.05deg, #000000 4%, #666666 60.64%);
+    font-family: "HelveticaNeueCyrMedium", sans-serif;
+    font-size: 80px;
+    line-height: 88px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    @include screen-max-width-1440{
+      font-size: 60px;
+      line-height: 66px;
+    }
+    @include screen-max-width-767{
+      font-size: 40px;
+      line-height: 48px;
+      margin-top: 60px;
+    }
+    @include screen-max-width-576{
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+  }
+  p{
+    font-family: "HelveticaNeueCyrMedium", sans-serif;
+    font-size: 18px;
+    line-height: 25.2px;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 40px;
+  }
+}
+
+.workshop-brothers{
+  position: absolute;
+  right: 0;
+  object-fit: contain;
+
+  @include screen-max-width-1440{
+    right: -100px;
+  }
+  @include screen-max-width-1200 {
+    margin-top: 60px;
+    position: relative;
+    height: 90vw;
+    right: -15px;
+  }
+
+}
+
+.workshop-content{
+  @include screen-max-width-1200{
+    flex-direction: column;
+  }
+}
